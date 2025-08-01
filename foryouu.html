@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Girlfriend Day 💖</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffe0f0, #ffd6e8);
+      color: #4b004b;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #6b006b;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      margin: 40px 0;
+      padding: 30px;
+      text-align: center;
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .card img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 30px;
+      color: #aa0066;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Happy Girlfriend Day Meisya Putriani</h1>
+    <p>Untuk kamu yang spesial... dari seseorang yang selalu mencintaimu</p>
+  </header>
+
+  <div class="content">
+    <div class="card fade">
+      <h2>💕 Terima Kasih, Cintaku</h2>
+      <p>
+        Untuk kamu yang selalu ada, yang sabarnya tiada dua, dan senyumnya bisa menenangkan dunia. Hari ini khusus untukmu, wanita hebat yang membuat hariku lebih berwarna. Terima kasih karena sudah jadi bagian dari hidupku. I love youuuu
+      </p>
+      <img src="https://i.ibb.co/hRQRdQNB/IMG-20250717-WA0057.jpg" alt="LOPYUUU">
+    </div>
+
+    <div class="card fade">
+      <h2>🌸 Bersamamu Itu Indah</h2>
+      <p>
+        Aku harap kamu tahu bahwa kamu sangat berarti.  
+        Tidak peduli apapun yang terjadi, aku akan selalu ada untuk kamu.  
+        Happy Girlfriend Day, cinta. You mean the world to me.
+      </p>
+      <img src="https://i.ibb.co/JW55hgdT/IMG-20250614-122811-177.jpg" alt="LOPYUUU">
+    </div>
+
+    <div class="card fade">
+      <h2>💌 Pesan Dari Hati</h2>
+      <p>
+        Selalu jaga kesehatan, Jaga diri baik baik, kalo ada apa apa bilang atau cerita ke aku jangan dipendem sendiri yaa,aku selalu ada untukmu, rahasiamu aman bersamaku akan selalu aku jaga, salam hangat dari ramadhani yang selalu mencintaimu asek
+      </p>
+      <img src="https://i.ibb.co/PGdzmgmc/image.jpg" alt="image">
+    </div>
+  </div>
+
+  <footer>
+    Dibuat dengan cinta ❤️ oleh seseorang yang tidak akan pernah berhenti mencintaimu
+  </footer>
+
+  <script>
+    // Animasi saat scroll
+    const faders = document.querySelectorAll('.fade');
+    const options = {
+      threshold: 0.3
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, options);
+
+    faders.forEach(fade => {
+      appearOnScroll.observe(fade);
+    });
+  </script>
+</body>
+</html>
